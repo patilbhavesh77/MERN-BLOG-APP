@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import userRoutes from './routes/user.route.js';
 
 mongoose.connect('mongodb://localhost:27017/Blogdata').then(()=>{
     console.log("Database is connected")
@@ -13,3 +14,5 @@ const app = express();
 app.listen(3000,()=>{
     console.log("Server is working")
 })
+
+app.use('/api/user', userRoutes);
