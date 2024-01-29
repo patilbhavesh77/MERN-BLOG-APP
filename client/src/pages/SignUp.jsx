@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 export default function SignUp() {
   const [formData,setFormData] = useState({});
-  const [erroMessage , setErrorMessage] = useState(null);
+  const [errorMessage , setErrorMessage] = useState(null);
   const[loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const handleChange =(e)=>{
@@ -101,9 +101,9 @@ export default function SignUp() {
             Sign-in
             </Link>
           </div>
-          {erroMessage && (
+          {errorMessage && (
             <Alert className='mt-5' color='failure'>
-              {erroMessage}
+              {errorMessage}
             </Alert>
           )}
         </div>
